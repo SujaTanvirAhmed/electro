@@ -18,6 +18,26 @@ a {
 }
 
 /**
+* PARTNER SLIDER
+*/
+.partner-slider-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.partner-slider-group a {
+    opacity: 0.3;
+}
+
+.partner-slider-group a:hover {
+    opacity: 1;
+}
+
+
+/**
 * PRODUCT TYPES
 */
 .product-types-group {
