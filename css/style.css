@@ -96,41 +96,75 @@ button {
 
 .header-bottom-middle {
     border: 2px solid var(--color-yellow);
-    padding: 0 30px;
     border-radius: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    width: 45%;
 }
 
 .header-bottom-middle input {
     border: 0;
     outline: 0;
+    margin-left: 25px;
+    width: 300px;
 }
 
 .header-bottom-middle select {
     border: 0;
     outline: 0;
+    margin-left: 0;
     cursor: pointer;
 }
 
-.header-bottom-middle button {
-    background: 0;
+.btn-search {
+    background-color: var(--color-yellow);
     border: 0;
+    padding: 8px 20px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    left: auto;
+}
+
+.magnifying-glass {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.magnifying-glass::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -7px;
+    height: 2px;
+    width: 10px;
+    background-color: black;
+    transform: rotate(45deg);
 }
 
 .header-bottom-right {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
     align-items: center;
+}
+
+.header-bottom-right img {
+    width: auto;
+    height: 25px;
 }
 
 .shopping-group {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .shopping {
@@ -139,10 +173,10 @@ button {
 
 .shopping .item-count {
     position: absolute;
-    bottom: 2px;
-    right: 20px;
+    bottom: -5px;
+    right: -7px;
     background-color: var(--color-yellow);
-    padding: 13px;
+    padding: 10px;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -284,6 +318,49 @@ button {
     justify-content: flex-end;
 }
 
+.banner-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-txt .title-1 {
+    font-size: 60px;
+}
+
+.banner-txt .title-2 {
+    font-size: 50px;
+}
+
+.banner-txt .subtitle {
+    font-size: 14.5px;
+    font-weight: bold;
+}
+
+.banner-txt .from {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.banner-txt .price {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.banner-txt .price sup {
+    font-size: 30px;
+}
+
+.banner-txt .c2a {
+    background-color: var(--color-yellow);
+    border: 0;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 25px;
+    width: 220px;
+}
 
 /**
 * SHOP NOW
@@ -559,6 +636,17 @@ footer svg {
 
 .footer-middle {
     background: #F8F8F8;
+}
+
+.footer-middle .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-middle .social svg {
+    height: 23px;
+    width: auto;
 }
 
 .footer-middle-group {
