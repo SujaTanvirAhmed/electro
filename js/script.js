@@ -23,7 +23,13 @@ btnAllDepartments.addEventListener("click", () => {
 });
 
 megaMenuCont.addEventListener("click", () => {
-    megaMenu.style.display = "flex";
+    const displayStatus = megaMenu.style.display;
+    if (displayStatus === "none" || displayStatus === "") {
+        megaMenu.style.display = "flex";
+    }
+    else {
+        megaMenu.style.display = "none";
+    }
 });
 
 btnFeatured.addEventListener("click", () => {

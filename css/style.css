@@ -281,18 +281,20 @@ button {
     position: absolute;
     top: 40px;
     left: 0;
-    width: 920px;
+    width: 850px;
     height: 400px;
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
     background: white;
     color: black;
     padding: 20px;
-    gap: 20px;
+    gap: 12px;
     font-weight: normal;
     text-align: left;
+    font-size: 13px;
+    border-radius: 5px;
 }
 
 /* .mega-menu h3 {} */
@@ -639,12 +641,34 @@ footer svg {
 }
 
 .footer-middle .social {
+    width: 230px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
-.footer-middle .social svg {
+.social-icon-cont {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    /* background-color: lightgray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-icon-cont:hover {
+    background-color: darkolivegreen;
+}
+
+.social-icon-cont:hover svg {
+    fill: white;
+}
+
+.social-icon-cont svg {
     height: 23px;
     width: auto;
 }
@@ -677,4 +701,20 @@ footer .footer-section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-developer {
+    background-color: lightgray;
+    padding: 10px 0;
+}
+
+.footer-developer p {
+    font-size: 15px;
+    color: rgb(65, 59, 59);
+    text-align: center;
+}
+
+.footer-developer span {
+    color: darkblue;
+    font-style: italic;
 }
