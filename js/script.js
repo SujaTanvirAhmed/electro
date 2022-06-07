@@ -33,13 +33,19 @@ megaMenuCont.addEventListener("click", () => {
 });
 
 btnFeatured.addEventListener("click", () => {
-    let displayStatus = contentFeatured.style.display;
-    if (displayStatus === "" || displayStatus === "none") {
-        contentFeatured.style.display = "block";
-        contentOnSale.style.display = "none";
-        contentTopRated.style.display = "none";
-    }
-    else {
-        contentFeatured.style.display = "none";
-    }
+    contentFeatured.style.display = "grid";
+    contentOnSale.style.display = "none";
+    contentTopRated.style.display = "none";
+});
+
+btnOnSale.addEventListener("click", () => {
+    contentOnSale.style.display = "grid";
+    contentFeatured.style.display = "none";
+    contentTopRated.style.display = "none";
+});
+
+btnTopRated.addEventListener("click", () => {
+    contentTopRated.style.display = "grid";
+    contentFeatured.style.display = "none";
+    contentOnSale.style.display = "none";
 });
