@@ -64,6 +64,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 a {
@@ -79,8 +80,96 @@ button {
 * HEADER
 */
 .header-top {
+    position: relative;
     padding: 15px 0;
+    font-size: 14px;
     border-bottom: 1px solid lightgray;
+}
+
+.login-window {
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    right: -261px;
+    display: none;
+    box-shadow: 3px 3px 7px black;
+    background: white;
+    z-index: 10;
+    transition: right 0.5s;
+}
+
+.login-window-cont {
+    position: relative;
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-window .input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.login-window .input-icon {
+    display: grid;
+    place-items: center;
+    padding: 0 15px;
+}
+
+.login-window .input-icon img {
+    height: 15px;
+    width: auto;
+}
+
+.login-window .input-icon,
+.login-window .input-element {
+    outline: 0;
+    border: 1px solid lightgray;
+}
+
+.login-window .input-icon {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 12px 22px;
+}
+
+.login-window .input-element {
+    padding: 12px 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 13px;
+}
+
+/* .login-window input {
+    padding: 12px 10px;
+    outline: 0;
+    border: 1px solid lightgray;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+} */
+
+.login-window .btn-input {
+    border: 1px solid lightgray;
+    padding: 12px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: -5px;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.header-top button {
+    background: none;
+    border: 0;
 }
 
 .header-bottom {
@@ -97,6 +186,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .header-bottom-group {
@@ -775,6 +865,10 @@ button {
     height: auto;
 }
 
+
+/**
+* ITEM CARD
+*/
 .item-card-big {
     height: auto;
 }
@@ -812,7 +906,8 @@ button {
     width: 185px;
 }
 
-.item-card-side .card-img-cont img {
+.card-img-cont img,
+.card-img-cont img {
     width: 100%;
     height: auto;
 }

@@ -12,6 +12,23 @@ const contentFeatured = document.querySelector("#content-featured");
 const contentOnSale = document.querySelector("#content-onsale");
 const contentTopRated = document.querySelector("#content-toprated");
 
+const loginWindow = document.querySelector(".login-window");
+const btnRegister = document.querySelector(".btn-register");
+const btnLogin = document.querySelector(".btn-login");
+const btnClose = document.querySelector(".btn-close");
+btnRegister.addEventListener("click", () => {
+    loginWindow.style.display = "block";
+    setTimeout(() => {
+        loginWindow.style.right = 0;
+    }, 200);
+});
+btnClose.addEventListener("click", () => {
+    loginWindow.style.right = -(loginWindow.clientWidth) + "px";
+    setTimeout(() => {
+        loginWindow.style.display = "none";
+    }, 500);
+});
+
 btnAllDepartments.addEventListener("click", () => {
     const displayStatus = menuAllDepartments.style.display;
     if (displayStatus === "" || displayStatus === "none") {
